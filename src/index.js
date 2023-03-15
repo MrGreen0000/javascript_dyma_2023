@@ -1,7 +1,16 @@
-let test = "123";
+// declation
+var firstName;
+console.log(firstName);
 
-console.log(test);
+//initialisation
+firstName = 1;
 
-console.info("bonjour les copains");
+console.log(firstName);
 
-console.warn("attention");
+var myvar;
+var myvar2;
+var myvar3;
+
+myvar = 123;
+
+console.log(myvar);
