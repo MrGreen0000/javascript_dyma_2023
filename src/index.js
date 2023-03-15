@@ -23,4 +23,6 @@ const today = new Date();
 
 const arr = [1, 2, 3];
 
-console.log(typeof arr);
+let x = 1;
+x = x++;
+console.log(x);
