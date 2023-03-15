@@ -1,16 +1,26 @@
-// declation
-var firstName;
-console.log(firstName);
+const name = "jean";
 
-//initialisation
-firstName = 1;
+const age = 18;
 
-console.log(firstName);
+const hobbies = null;
 
-var myvar;
-var myvar2;
-var myvar3;
+let action;
 
-myvar = 123;
+let sym = Symbol();
 
-console.log(myvar);
+let actif = true;
+
+const ville = {
+  name: "Paris",
+  state: "France",
+};
+
+const greetings = function () {
+  console.log("Hello !");
+};
+
+const today = new Date();
+
+const arr = [1, 2, 3];
+
+console.log(typeof arr);
