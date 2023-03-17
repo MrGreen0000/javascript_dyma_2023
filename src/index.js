@@ -1,28 +1,35 @@
-const name = "jean";
+const condition = true;
+
+if (condition === true) {
+  console.log("ici");
+}
 
 const age = 18;
-
-const hobbies = null;
-
-let action;
-
-let sym = Symbol();
-
-let actif = true;
-
-const ville = {
-  name: "Paris",
-  state: "France",
-};
-
-const greetings = function () {
-  console.log("Hello !");
-};
-
-const today = new Date();
-
-const arr = [1, 2, 3];
-
-let x = 1;
-x = x++;
-console.log(x);
+switch (age) {
+  case 21:
+    console.log("Tu peux boire de l’alcool aux Etats-Unis.");
+    break;
+  case 18:
+    console.log("Tu peux boire de l’alcool en France.");
+    break;
+  case 16:
+    console.log("Tu peux boire de l’alcool à Cuba.");
+    break;
+  case 14:
+    console.log("Tu peux boire de la bière en Allemagne.");
+    break;
+  default:
+    console.log("Rien pour toi cette année.");
+}
+const pays = "Maroc";
+switch (pays) {
+  case "France":
+  case "Allemagne":
+  case "Italie":
+  case "Espagne":
+    console.log("Tu es européen !");
+    break;
+  case "Corée":
+  default:
+    console.log("Tu n’es pas européen.");
+}
