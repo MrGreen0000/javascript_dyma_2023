@@ -1,8 +1,21 @@
-console.log("a".length === 1);
-console.log("𝌆".length === 2);
-console.log("\u0061" === "a");
-console.log("\uD83D\uDE00");
-console.log("\uD83D\uDE20");
-console.log("😀".length);
-console.log("\u{1F607}"); //Unicode
-console.log("\uD83D\uDE07"); //UTF-16
+console.log("chaine".length);
+
+const a = "jesuis le soleil";
+const b = a.endsWith("il");
+
+console.log(b);
+
+console.log("petit koala".includes("Koala"));
+console.log("petit koala".includes("koala"));
+
+console.log("istanbul".toLocaleUpperCase("tr"));
+
+console.log("Bonjour Paul ! Bonjour Stéphane".indexOf("Bonjour", 16));
+console.log("Bonjour Paul ! Bonjour Stéphane".repeat(2));
+console.log("      Bonjour Paul ! Bonjour Stéphane         ".trim());
+
+const numeroCarte = "4678628353263149";
+const quatreDerniersChiffres = numeroCarte.slice(-4);
+
+const numeroObfusque = quatreDerniersChiffres.padStart(numeroCarte.length, "*");
+console.log(numeroObfusque);
