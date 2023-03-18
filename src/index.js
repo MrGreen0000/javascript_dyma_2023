@@ -1,17 +1,8 @@
-console.log((0.2 * 100 + 0.1 * 100) / 100);
-console.log(1e6);
-console.log(2 ** 3);
+const a = 1.44444444;
 
-console.log(parseFloat(" 32.21frefz"));
-parseFloat("   0.152e57  "); // 1.52e+56
-parseFloat(".1"); // 0.1
-parseFloat("a1"); // NaN
+console.log(parseFloat(a.toFixed(2)));
 
-console.log(parseInt(" 32.21frefz", 10));
-console.log(parseInt("10101", 2));
+const b = Math.PI;
 
-console.log(+"78");
-console.log(3 + +"78");
-
-console.log(parseInt("-."));
-console.log(Number.isNaN(undefined));
+console.log(b);
+console.log(Math.floor(Math.random() * 10) % 5);
