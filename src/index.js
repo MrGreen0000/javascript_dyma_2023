@@ -1,21 +1,29 @@
-console.log("chaine".length);
+const regex1 = /.+/;
+const regex2 = new RegExp("w+");
+const regex3 = RegExp("w+");
 
-const a = "jesuis le soleil";
-const b = a.endsWith("il");
+const regexp = RegExp("test.", "g");
+const chaine = "Une chaîne pour tester et effectuer des tests";
+const matches = chaine.matchAll(regexp);
 
-console.log(b);
+for (const match of matches) {
+  console.log(match);
+}
 
-console.log("petit koala".includes("Koala"));
-console.log("petit koala".includes("koala"));
+console.log(/a/.test("abc"));
+RegExp(12).test(8768912);
 
-console.log("istanbul".toLocaleUpperCase("tr"));
+RegExp("d").test("fezezf2");
+/\d/.test(4);
+/\d/.test("bonjour");
 
-console.log("Bonjour Paul ! Bonjour Stéphane".indexOf("Bonjour", 16));
-console.log("Bonjour Paul ! Bonjour Stéphane".repeat(2));
-console.log("      Bonjour Paul ! Bonjour Stéphane         ".trim());
+/\D/.test("bonjour");
+/\D/.test(4);
 
-const numeroCarte = "4678628353263149";
-const quatreDerniersChiffres = numeroCarte.slice(-4);
+console.log("mon_super_fichier.pdf".match(/(^\w+)\.([a-z]{3}$)/));
 
-const numeroObfusque = quatreDerniersChiffres.padStart(numeroCarte.length, "*");
-console.log(numeroObfusque);
+console.log(
+  /(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[\W_]).{10,}/.test("hE1!frezzfe")
+);
+
+console.log(/\d+\w\d+/.test("42_12"));
