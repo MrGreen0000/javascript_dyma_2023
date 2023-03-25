@@ -1,8 +1,21 @@
-const obj = { a: {}, b: 42, c: true, d: "test" };
+// function additionner(...nombres) {
+//   let resultat = 0;
+//   for (let i = 0; i < nombres.length; i++) {
+//     resultat += nombres[i];
+//   }
+//   console.log(resultat);
+// }
 
-console.log(JSON.stringify(obj));
+// additionner(42, 22, 12, 23);
 
-const json = JSON.stringify({ a: 1, b: 2 });
-const objet = JSON.parse(json);
+function calculer(operateur, ...nombres) {
+  let resultat = 0;
+  if (operateur === "+") {
+    for (let i = 0; i < nombres.length; i++) {
+      resultat += nombres[i];
+    }
+  }
+  console.log(resultat);
+}
 
-console.log(objet);
+calculer("+", 42, 22, 12, 23);
