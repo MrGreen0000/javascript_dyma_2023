@@ -1,14 +1,31 @@
 import "./style.css";
 
-const p = document.querySelector(".text-primary");
+const square = document.querySelector("div");
 
-// console.log(p);
+square.addEventListener(
+  "mouseover",
+  () => {
+    square.style.backgroundColor = "red";
+  },
+  { once: true }
+);
 
-// p.remove();
+square.addEventListener("mouseover", () => {
+  square.style.width = "300px";
+  square.style.height = "300px";
+});
 
-const span = document.createElement("span");
-span.innerHTML = "<h1>Salut</h1>";
+square.addEventListener("mouseout", () => {
+  square.style.backgroundColor = "#eee";
+});
 
-// p.parentElement.replaceChild(span, p);
+square.addEventListener("mouseout", () => {
+  square.style.width = "200px";
+  square.style.height = "200px";
+});
 
-p.replaceWith(span);
+// square.onmouseover = () => (square.style.backgroundColor = "red");
+
+// square.onmouseover = null;
+
+// square.onmouseout = () => (square.style.backgroundColor = "#eee");

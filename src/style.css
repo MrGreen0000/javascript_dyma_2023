@@ -1,7 +1,13 @@
-.section {
-  border: 1px solid red;
+body {
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.text-primary {
-  color: blue;
+div {
+  width: 200px;
+  height: 200px;
+  background-color: #eee;
 }
