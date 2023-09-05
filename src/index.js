@@ -1,31 +1,19 @@
 import "./style.css";
 
 const square = document.querySelector("div");
+const btn = document.querySelector("button");
 
-square.addEventListener(
-  "mouseover",
-  () => {
-    square.style.backgroundColor = "red";
-  },
-  { once: true }
-);
+const becomeRed = () => {
+  square.style.backgroundColor = "red";
+};
 
-square.addEventListener("mouseover", () => {
-  square.style.width = "300px";
-  square.style.height = "300px";
-});
+square.addEventListener("mouseover", becomeRed);
 
 square.addEventListener("mouseout", () => {
   square.style.backgroundColor = "#eee";
+  square.removeEventListener("mouseover", becomeRed);
 });
 
-square.addEventListener("mouseout", () => {
-  square.style.width = "200px";
-  square.style.height = "200px";
+btn.addEventListener("click", () => {
+  square.dispatchEvent(new Event("mouseover"));
 });
-
-// square.onmouseover = () => (square.style.backgroundColor = "red");
-
-// square.onmouseover = null;
-
-// square.onmouseout = () => (square.style.backgroundColor = "#eee");
