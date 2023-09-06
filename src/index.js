@@ -3,14 +3,11 @@ import "./style.css";
 const form = document.querySelector("form");
 const input = document.querySelector("input");
 
-form.addEventListener("submit", (event) => {
-  console.log(event);
-  event.preventDefault();
+form.addEventListener("click", (event) => {
+  console.log("form click");
 });
 
-input.addEventListener("keydown", (event) => {
-  if (event.key === "t") {
-    input.style.borderColor = "red";
-  }
-  console.log(event);
+input.addEventListener("click", (event) => {
+  console.log("input click");
+  event.stopPropagation();
 });
