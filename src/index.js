@@ -1,12 +1,16 @@
 import "./style.css";
 
-const square = document.querySelector("div");
-const span = document.querySelector("span");
+const form = document.querySelector("form");
+const input = document.querySelector("input");
 
-square.addEventListener("click", () => {
-  console.log("click on div");
+form.addEventListener("submit", (event) => {
+  console.log(event);
+  event.preventDefault();
 });
 
-span.addEventListener("click", () => {
-  console.log("click on span");
+input.addEventListener("keydown", (event) => {
+  if (event.key === "t") {
+    input.style.borderColor = "red";
+  }
+  console.log(event);
 });
