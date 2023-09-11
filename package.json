@@ -15,7 +15,9 @@
     "@babel/cli": "^7.21.0",
     "@babel/core": "^7.21.0",
     "@babel/preset-env": "^7.20.2",
+    "core-js": "^3.32.2",
     "css-loader": "^6.8.1",
+    "regenerator-runtime": "^0.14.0",
     "style-loader": "^3.3.3"
   },
   "devDependencies": {

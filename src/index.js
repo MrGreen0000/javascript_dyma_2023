@@ -1,13 +1,13 @@
-import "./style.css";
+const promesse = fetch("https://jsonplaceholder.typicode.com/users");
 
-const form = document.querySelector("form");
-const input = document.querySelector("input");
-
-form.addEventListener("click", (event) => {
-  console.log("form click");
-});
-
-input.addEventListener("click", (event) => {
-  console.log("input click");
-  event.stopPropagation();
-});
+promesse
+  .then(async (response) => {
+    console.log(response);
+    try {
+      const users = await response.text();
+      console.log(JSON.parse(users));
+    } catch (error) {
+      console.log(error);
+    }
+  })
+  .catch((err) => console.log(err));
