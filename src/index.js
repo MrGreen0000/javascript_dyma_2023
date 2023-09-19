@@ -1,24 +1,22 @@
-const user = {
-  name: "tintin",
-  email: "tintin@gmail.com",
-};
+const form = document.querySelector("form");
+const input = document.querySelector("form > input");
 
-const promesse = fetch("https://jsonplaceholder.typicode.com/users", {
-  method: "POST",
-  body: JSON.stringify(user),
-  headers: {
-    "Content-type": "application/json",
-  },
+form.addEventListener("submit", (event) => {
+  event.preventDefault();
+  input.value = "";
+
+  const formData = new FormData(form);
+  console.log(formData);
+
+  formData.append("email", "bob@gmail.com");
+  console.log(formData.get("email"));
+  console.log(formData.has("email"));
+  for (let pair of formData) {
+    console.log(pair);
+  }
+
+  fetch("/test", {
+    method: "POST",
+    body: formData,
+  });
 });
-
-promesse
-  .then(async (response) => {
-    try {
-      console.log(response);
-      const body = await response.json();
-      console.log(body);
-    } catch (error) {
-      console.log(error);
-    }
-  })
-  .catch((err) => console.log(err));
