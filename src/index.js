@@ -1,22 +1,21 @@
-const form = document.querySelector("form");
-const input = document.querySelector("form > input");
+const xhr = new XMLHttpRequest();
 
-form.addEventListener("submit", (event) => {
-  event.preventDefault();
-  input.value = "";
+xhr.open("GET", "https://jsonplaceholder.typicode.com/todos");
 
-  const formData = new FormData(form);
-  console.log(formData);
+xhr.responseType = "json";
 
-  formData.append("email", "bob@gmail.com");
-  console.log(formData.get("email"));
-  console.log(formData.has("email"));
-  for (let pair of formData) {
-    console.log(pair);
-  }
+xhr.send();
 
-  fetch("/test", {
-    method: "POST",
-    body: formData,
-  });
+xhr.addEventListener("load", (response) => {
+  console.log(response);
+  const result = xhr.response;
+  console.log(xhr.response);
+});
+
+xhr.addEventListener("erro", (err) => {
+  console.log(err);
+});
+
+xhr.addEventListener("progress", (progress) => {
+  console.log(progress);
 });
